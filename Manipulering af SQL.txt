@@ -1,0 +1,7 @@
+SELECT * FROM Measures;
+
+create table Todo_dg_tmp (ID int,"RECIPY NAME" text,DESCRIPTION text,"INGREDIENTS ID" int,"MEASURES ID" int);
+
+insert into Todo_dg_tmp(ID, "RECIPY NAME", DESCRIPTION, "INGREDIENTS I", "MEASURES ID") select ID, "RECIPY NAME", DESCRIPTION, "INGREDIENTS ID", "MEASURES ID" from Todo;
+
+alter table Todo add TEST int /*autoincrement needs PK*/;
